@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f4f4f9; }
+        #chatbox { width: 400px; border: 1px solid #ccc; padding: 20px; background-color: white; }
+        .message { margin-bottom: 10px; }
+        .user-message { color: blue; font-weight: bold; }
+        .bot-message { color: green; font-weight: bold; }
+        input { width: calc(100% - 60px); padding: 10px; margin-right: 5px; }
+        button { padding: 10px; margin-bottom: 5px; margin-left: 5px;  margin-right: 5px; margin-top: 10px; background-color: rgb(234, 238, 239); }
+    </style>
+</head>
+<body>
+    <div id="chatbox">
+        <div id="messages"></div>
+        <div>
+            <input type="text" id="userInput" placeholder="Type a message..." autocomplete="off">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        function addMessage(text, sender) {
+            const messagesDiv = document.getElementById("messages");
+            const messageDiv = document.createElement("div");
+            messageDiv.classList.add("message");
+            messageDiv.classList.add(sender + "-message");
+            messageDiv.innerText = text;
+            messagesDiv.appendChild(messageDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        function sendMessage() {
+            const userInput = document.getElementById("userInput").value.trim();
+            if (!userInput) return;  // Do nothing if input is empty
+
+            addMessage("You: " + userInput, "user");
+            document.getElementById("userInput").value = "";  // Clear input field
+
+            fetch("/get_response", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams({ message: userInput })
+            })
+            .then(response => response.json())
+            .then(data => addMessage("Bot: " + data.response, "bot"))
+            .catch(error => console.error("Error:", error));
+        }
+    </script>
+</body>
+</html>
