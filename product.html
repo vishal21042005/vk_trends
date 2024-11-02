@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Section - Clothing Store</title>
+    <link rel="stylesheet" href="product.css">
+    <style>
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+/* Container and section title */
+.container {
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Product grid styles */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.product-item {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin-top: 5px;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Product image */
+.product-item img {
+    width: 100%;
+    border-radius: 8px;
+    height: auto;
+}
+
+/* Product name and price */
+.product-name {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.product-price {
+    font-size: 1rem;
+    color: #777;
+}
+#cc{
+  margin-top:30px;
+}
+#j{
+  margin-top: 10px;
+}
+
+/* Buy button */
+.buy-button {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.buy-button:hover {
+    background-color: #218838;
+
+}
+
+  /* Navbar Styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: #fff;
+  }
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  .nav-links li {
+    margin: 0 0.5rem;
+  }
+  .nav-links a {
+    color: #fff;
+  }
+  .nav-icons a {
+    color: #fff;
+    margin-left: 1rem;
+  }
+  #tt{
+    margin-top: 25px;
+    
+  }
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+            <div class="logo">VK Trends</div>
+            <ul class="nav-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="product.html">Product</a></li>
+              <!-- <li><a href="#women">Women</a></li> -->
+              <!-- <li><a href="#kids">Kids</a></li> -->
+              <li><a href="chat.html">Bot</a></li>
+            </ul>
+            <div class="nav-icons">
+              <a href="#search">🔍</a>
+              <a href="#wishlist">❤️</a>
+              <a href="#cart">🛒</a>
+            </div>
+    </nav>
+    
+    <div class="container">
+        <h2 class="section-title">Popular Product</h2>
+        
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="static/tshirt.png" id="tt" alt="T-Shirt">
+                <h6 id="cc" class="product-name">Comfortable cotton </h6>
+                <h3 class="product-name">T-Shirt</h3>
+                <p class="product-price"><b>300</b></p>
+                <a href="#" class="buy-button">Buy Now</a>
+            </div>
+            
+            <div class="product-item">
+                <img src="static/jeans.png" alt="Jeans">
+                <h6 class="product-name">Stylish blue </h6>
+                <h3 class="product-name">Jeans</h3>
+                <p class="product-price"><b>450</b></p>
+                <a href="#" class="buy-button">Buy Now</a>
+            </div>
+
+            <div class="product-item">
+                <img src="static/jacket.png" alt="Jacket">
+                <h6 id="j" class="product-name">Warm winter</h6>
+                <h3 class="product-name">Jacket</h3>
+                <p class="product-price"><b>999</b></p>
+                <a href="#" class="buy-button">Buy Now</a>
+            </div>
+
+            <!-- Add more product items as needed -->
+        </div>
+    </div>
+</body>
+</html>
