@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clothing Store</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <style>
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  body {
+    font-family: Arial, sans-serif;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: #fff;
+  }
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  .nav-links li {
+    margin: 0 0.5rem;
+  }
+  .nav-links a {
+    color: #fff;
+  }
+  .nav-icons a {
+    color: #fff;
+    margin-left: 1rem;
+  }
+  
+  /* Hero Section Styles */
+  .hero {
+    text-align: center;
+    padding: 5rem 1rem;
+    background: url('hero-image.jpg') no-repeat center/cover;
+    color: #fff;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .cta-button {
+    padding: 0.75rem 2rem;
+    background-color: #f28b18;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Featured Section Styles */
+  .featured {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  .featured h2 {
+    margin-bottom: 1rem;
+  }
+  .collections {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .collection-item {
+    padding: 1rem;
+    background-color: #f0f0f0;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  /* Offers Section Styles */
+  .offers {
+    padding: 2rem 1rem;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+  }
+  .offers h2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Testimonials Section Styles */
+  .testimonials {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  .testimonials h2 {
+    margin-bottom: 1rem;
+  }
+  .testimonial {
+    margin: 0.5rem 0;
+    font-style: italic;
+  }
+  
+  /* Footer Styles */
+  .footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  .footer-links,
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+  }
+  .footer-links a,
+  .social-links a {
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  #kt{
+    margin-top: 8px ;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <!-- Navbar  -->
+  <nav class="navbar">
+    <div class="logo">VK Trends</div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="product.html">Product</a></li>
+       <!-- <li><a href="#women">Women</a></li>  -->
+       <!-- <li><a href="#kids">Kids</a></li>  -->
+       <li><a href="chat.html">Bot</a></li>
+    </ul> 
+    <div class="nav-icons">
+      <a href="#search">🔍</a>
+      <a href="#wishlist">❤️</a>
+      <a href="#cart">🛒</a>
+    </div>
+  </nav> 
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Discover Our Latest Collection</h1>
+    <button class="cta-button">Shop Now</button>
+  </section>
+
+  <!-- Featured Collections -->
+  <section class="featured">
+    <h2>Featured Collections</h2>
+    <div class="collections">
+      <div class="collection-item">Trending Now</div>
+      <div class="collection-item">New Arrivals</div>
+      <div class="collection-item">Best Sellers</div>
+    </div>
+  </section>
+
+  <!-- Special Offers -->
+  <section class="offers">
+    <h2>Special Offers</h2>
+    <p>Up to 40% off on select items!</p>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial">"Great quality and style!"</div>
+    <div class="testimonial">"Fast delivery and excellent service!"</div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact Us</a>
+      <a href="#about">About Us</a>
+    </div> 
+    <p id="kt">KEEP IN TOUCH</p>
+    <div class="social-links">
+      <a href="#facebook">Facebook</a>
+      <a href="#instagram">Instagram</a>
+      <a href="#twitter">Twitter</a>
+    </div>
+    <p>&copy; 2024 VK Trends</p>
+  </footer> 
+ </body>
+</html> 
